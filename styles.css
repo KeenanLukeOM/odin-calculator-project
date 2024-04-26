@@ -1,0 +1,29 @@
+#calculatorBox {
+    width: 500px;
+    height: 800px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    flex: 5 1 266px;
+}
+
+.row {
+    flex: 1 1 133px;
+    display: flex;
+}
+
+.button {
+    color: black;
+    flex: 1 1 auto;
+}
+
+.lowerButton {
+    flex: 1 1 auto;
+}
+
+.zero {
+    flex: 2 1 auto;
+}
