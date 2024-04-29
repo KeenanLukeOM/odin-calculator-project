@@ -10,6 +10,15 @@
     flex: 5 1 266px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding: 20px 60px;
+}
+
+.displayWindow,
+.smallDisplayWindow {
+    display: flex;
+    align-items: center;
 }
 
 .displayWindow {
@@ -28,10 +37,16 @@
 .button {
     color: black;
     flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lowerButton {
     flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .zero {
