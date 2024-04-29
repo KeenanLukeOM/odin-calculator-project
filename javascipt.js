@@ -191,7 +191,12 @@ selector.forEach((selector) => {
                 displayText.textContent = displayTextVar;
                 break;
             case "decimal":
-                // Code!
+                if (displayTextVar.includes(".")) {
+                    break;
+                } else {
+                    displayTextVar = displayTextVar + ".";
+                    displayText.textContent = displayTextVar;
+                }
                 break;
             case "equals":
                 // Sets numbers to display text
