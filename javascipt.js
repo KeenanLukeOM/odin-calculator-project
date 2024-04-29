@@ -156,6 +156,36 @@ selector.forEach((selector) => {
                 break;
             case "plus":
                 // Code!
+                if (smallDisplayTextVar === "") {
+                    // Sets the first number, operator to text
+                    firstNumber = displayTextVar;
+                    operator = "add";
+                    // Sets small text content
+                    smallDisplayTextVar = displayTextVar + " " + "+";
+                    smallDisplayText.textContent = smallDisplayTextVar;
+
+                    // Wipes display content
+                    displayTextVar = "";
+                    displayText.textContent = displayTextVar;
+                } else {
+                    // If second display populated, sets numbers to display text
+                    secondNumber = displayTextVar;
+
+                    // Calculates outcome
+                    const outcome = add();
+
+                    // Sets first number to outcome and only ui to outcome
+                    firstNumber = outcome;
+
+                    // Sets small text content
+                    smallDisplayTextVar = outcome + " " + "+";
+                    smallDisplayText.textContent = smallDisplayTextVar;
+
+                    // Sets text content to outcome, var to blank
+                    displayText.textContent = outcome;
+                    displayTextVar = "";
+                }
+                // Code!
                 break;
             case "zero":
                 displayTextVar = displayTextVar + "0";
@@ -176,19 +206,19 @@ let operator;
 let secondNumber = 0;
 
 function add() {
-    return firstNumber + secondNumber;
+    return Number(firstNumber) + Number(secondNumber);
 }
 
 function subtract() {
-    return firstNumber - secondNumber;
+    return Number(firstNumber) - Number(secondNumber);
 }
 
 function multiply() {
-    return firstNumber * secondNumber;
+    return Number(firstNumber) * Number(secondNumber);
 }
 
 function divide() {
-    return firstNumber / secondNumber;
+    return Number(firstNumber) / Number(secondNumber);
 }
 
 function operate() {
