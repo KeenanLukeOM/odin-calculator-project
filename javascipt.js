@@ -1,5 +1,10 @@
 "use strict";
 
+// Select the display windows
+
+let displayText = document.querySelector(".displayText");
+let smallDisplayText = document.querySelector(".smallDisplayText");
+
 // Query selectors for buttons
 let selector = document.querySelectorAll(".topButton, .button, .lowerButton");
 
@@ -9,7 +14,7 @@ selector.forEach((selector) => {
         console.log(action);
         switch (action) {
             case "clear":
-                // Code!
+                displayText.textContent = "Clear!";
                 break;
             case "negative":
                 // Code!
