@@ -5,6 +5,8 @@
 let displayText = document.querySelector(".displayText");
 let smallDisplayText = document.querySelector(".smallDisplayText");
 
+let currentDisplayText = "";
+
 // Query selectors for buttons
 let selector = document.querySelectorAll(".topButton, .button, .lowerButton");
 
@@ -23,43 +25,53 @@ selector.forEach((selector) => {
                 // Code!
                 break;
             case "seven":
-                // Code!
+                currentDisplayText = currentDisplayText + 7;
+                displayText.textContent = currentDisplayText;
                 break;
             case "eight":
-                // Code!
+                currentDisplayText = currentDisplayText + 8;
+                displayText.textContent = currentDisplayText;
                 break;
             case "nine":
-                // Code!
+                currentDisplayText = currentDisplayText + 9;
+                displayText.textContent = currentDisplayText;
                 break;
             case "multiply":
                 // Code!
                 break;
             case "four":
-                // Code!
+                currentDisplayText = currentDisplayText + 4;
+                displayText.textContent = currentDisplayText;
                 break;
             case "five":
-                // Code!
+                currentDisplayText = currentDisplayText + 5;
+                displayText.textContent = currentDisplayText;
                 break;
             case "six":
-                // Code!
+                currentDisplayText = currentDisplayText + 6;
+                displayText.textContent = currentDisplayText;
                 break;
             case "minus":
                 // Code!
                 break;
             case "one":
-                // Code!
+                currentDisplayText = currentDisplayText + 1;
+                displayText.textContent = currentDisplayText;
                 break;
             case "two":
-                // Code!
+                currentDisplayText = currentDisplayText + 2;
+                displayText.textContent = currentDisplayText;
                 break;
             case "three":
-                // Code!
+                currentDisplayText = currentDisplayText + 3;
+                displayText.textContent = currentDisplayText;
                 break;
             case "plus":
                 // Code!
                 break;
             case "zero":
-                // Code!
+                currentDisplayText = currentDisplayText + 0;
+                displayText.textContent = currentDisplayText;
                 break;
             case "decimal":
                 // Code!
