@@ -23,7 +23,13 @@ selector.forEach((selector) => {
                 smallDisplayText.textContent = smallDisplayTextVar;
                 break;
             case "negative":
-                // Code!
+                if (displayTextVar.includes("-")) {
+                    displayTextVar = displayTextVar.replace("-", "");
+                    displayText.textContent = displayTextVar;
+                } else {
+                    displayTextVar = "-" + displayTextVar;
+                    displayText.textContent = displayTextVar;
+                }
                 break;
             case "divide":
                 if (smallDisplayTextVar === "") {
