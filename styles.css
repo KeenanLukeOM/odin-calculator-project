@@ -34,6 +34,11 @@
     display: flex;
 }
 
+button {
+    font-size: 44px;
+    padding: 10px 30px;
+}
+
 .button {
     color: black;
     flex: 1 1 auto;
