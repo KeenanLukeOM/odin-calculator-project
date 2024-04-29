@@ -69,7 +69,36 @@ selector.forEach((selector) => {
                 displayText.textContent = displayTextVar;
                 break;
             case "multiply":
-                // Code!
+                if (smallDisplayTextVar === "") {
+                    // Sets the first number, operator to text
+                    firstNumber = displayTextVar;
+                    operator = "mult";
+                    // Sets small text content
+                    smallDisplayTextVar = displayTextVar + " " + "x";
+                    smallDisplayText.textContent = smallDisplayTextVar;
+
+                    // Wipes display content
+                    displayTextVar = "";
+                    displayText.textContent = displayTextVar;
+                } else {
+                    // If second display populated, sets numbers to display text
+                    secondNumber = displayTextVar;
+
+                    // Calculates outcome
+                    const outcome = multiply();
+
+                    // Sets first number to outcome and only ui to outcome
+                    firstNumber = outcome;
+
+                    // Sets small text content
+                    smallDisplayTextVar = outcome + " " + "x";
+                    smallDisplayText.textContent = smallDisplayTextVar;
+
+                    // Sets text content to outcome, var to blank
+                    displayText.textContent = outcome;
+                    displayTextVar = "";
+                }
+
                 break;
             case "four":
                 displayTextVar = displayTextVar + "4";
