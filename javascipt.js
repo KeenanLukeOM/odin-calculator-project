@@ -155,7 +155,6 @@ selector.forEach((selector) => {
                 displayText.textContent = displayTextVar;
                 break;
             case "plus":
-                // Code!
                 if (smallDisplayTextVar === "") {
                     // Sets the first number, operator to text
                     firstNumber = displayTextVar;
@@ -185,7 +184,7 @@ selector.forEach((selector) => {
                     displayText.textContent = outcome;
                     displayTextVar = "";
                 }
-                // Code!
+
                 break;
             case "zero":
                 displayTextVar = displayTextVar + "0";
@@ -195,7 +194,22 @@ selector.forEach((selector) => {
                 // Code!
                 break;
             case "equals":
-                // Code!
+                // Sets numbers to display text
+                secondNumber = displayTextVar;
+
+                // Calculates outcome
+                const outcome = operate();
+
+                // Sets first number to outcome and only ui to outcome
+                firstNumber = outcome;
+
+                // Sets small text content
+                smallDisplayTextVar = outcome;
+                smallDisplayText.textContent = smallDisplayTextVar;
+
+                // Sets text content to outcome, var to blank
+                displayText.textContent = outcome;
+                displayTextVar = "";
                 break;
         }
     });
@@ -223,12 +237,12 @@ function divide() {
 
 function operate() {
     if (operator === "add") {
-        add();
+        return add();
     } else if (operator === "sub") {
-        subtract();
+        return subtract();
     } else if (operator === "mult") {
-        multiply();
+        return multiply();
     } else if (operator === "div") {
-        divide();
+        return divide();
     }
 }
