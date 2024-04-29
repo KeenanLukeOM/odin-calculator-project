@@ -5,7 +5,8 @@
 let displayText = document.querySelector(".displayText");
 let smallDisplayText = document.querySelector(".smallDisplayText");
 
-let currentDisplayText = "";
+let displayTextVar = "";
+let smallDisplayTextVar = "";
 
 // Query selectors for buttons
 let selector = document.querySelectorAll(".topButton, .button, .lowerButton");
@@ -16,62 +17,93 @@ selector.forEach((selector) => {
         console.log(action);
         switch (action) {
             case "clear":
-                displayText.textContent = "Clear!";
+                displayTextVar = "";
+                displayText.textContent = displayTextVar;
+                smallDisplayTextVar = "";
+                smallDisplayText.textContent = smallDisplayTextVar;
                 break;
             case "negative":
                 // Code!
                 break;
             case "divide":
-                // Code!
+                if (smallDisplayTextVar === "") {
+                    // Sets the first number, operator to text
+                    firstNumber = displayTextVar;
+                    operator = "div";
+                    // Sets small text content
+                    smallDisplayTextVar = displayTextVar + " " + "÷";
+                    smallDisplayText.textContent = smallDisplayTextVar;
+
+                    // Wipes display content
+                    displayTextVar = "";
+                    displayText.textContent = displayTextVar;
+                } else {
+                    // If second display populated, sets numbers to display text
+                    secondNumber = displayTextVar;
+
+                    // Calculates outcome
+                    const outcome = divide();
+
+                    // Sets first number to outcome and only ui to outcome
+                    firstNumber = outcome;
+
+                    // Sets small text content
+                    smallDisplayTextVar = outcome + " " + "÷";
+                    smallDisplayText.textContent = smallDisplayTextVar;
+
+                    // Sets text content to outcome, var to blank
+                    displayText.textContent = outcome;
+                    displayTextVar = "";
+                }
                 break;
             case "seven":
-                currentDisplayText = currentDisplayText + 7;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "7";
+                displayText.textContent = displayTextVar;
                 break;
             case "eight":
-                currentDisplayText = currentDisplayText + 8;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "8";
+                displayText.textContent = displayTextVar;
                 break;
             case "nine":
-                currentDisplayText = currentDisplayText + 9;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "9";
+                displayText.textContent = displayTextVar;
                 break;
             case "multiply":
                 // Code!
                 break;
             case "four":
-                currentDisplayText = currentDisplayText + 4;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "4";
+                displayText.textContent = displayTextVar;
                 break;
             case "five":
-                currentDisplayText = currentDisplayText + 5;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "5";
+                displayText.textContent = displayTextVar;
                 break;
             case "six":
-                currentDisplayText = currentDisplayText + 6;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "6";
+                displayText.textContent = displayTextVar;
                 break;
             case "minus":
                 // Code!
                 break;
             case "one":
-                currentDisplayText = currentDisplayText + 1;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "1";
+                displayText.textContent = displayTextVar;
                 break;
             case "two":
-                currentDisplayText = currentDisplayText + 2;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "2";
+                displayText.textContent = displayTextVar;
                 break;
             case "three":
-                currentDisplayText = currentDisplayText + 3;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "3";
+                displayText.textContent = displayTextVar;
                 break;
             case "plus":
                 // Code!
                 break;
             case "zero":
-                currentDisplayText = currentDisplayText + 0;
-                displayText.textContent = currentDisplayText;
+                displayTextVar = displayTextVar + "0";
+                displayText.textContent = displayTextVar;
                 break;
             case "decimal":
                 // Code!
@@ -83,9 +115,9 @@ selector.forEach((selector) => {
     });
 });
 
-let firstNumber = 5;
+let firstNumber = 0;
 let operator;
-let secondNumber = 5;
+let secondNumber = 0;
 
 function add() {
     return firstNumber + secondNumber;
