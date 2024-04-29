@@ -1,5 +1,8 @@
 "use strict";
 
+let clear = document.querySelector(".clear");
+let negative = document.querySelector(".negative");
+
 let firstNumber = 5;
 let operator;
 let secondNumber = 5;
