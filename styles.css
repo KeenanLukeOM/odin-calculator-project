@@ -54,3 +54,11 @@
 .clear {
     flex: 2 1 auto;
 }
+
+.displayText {
+    font-size: 64px;
+}
+
+.smallDisplayText {
+    font-size: 32px;
+}
