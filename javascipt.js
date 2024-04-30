@@ -14,6 +14,8 @@ let selector = document.querySelectorAll(".topButton, .button, .lowerButton");
 selector.forEach((selector) => {
     selector.addEventListener("click", function () {
         const action = selector.dataset.action;
+
+        // Displays action in console, remove in hypothetical prod
         console.log(action);
         switch (action) {
             case "clear":
@@ -23,7 +25,20 @@ selector.forEach((selector) => {
                 smallDisplayText.textContent = smallDisplayTextVar;
                 break;
             case "negative":
-                if (displayTextVar.includes("-")) {
+                if (
+                    smallDisplayTextVar !== "" &&
+                    displayTextVar.includes("-")
+                ) {
+                    displayTextVar = smallDisplayTextVar.toString();
+
+                    displayTextVar = displayTextVar.replace("-", "");
+                    displayText.textContent = displayTextVar;
+                } else if (smallDisplayTextVar !== "") {
+                    displayTextVar = smallDisplayTextVar;
+
+                    displayTextVar = "-" + displayTextVar;
+                    displayText.textContent = displayTextVar;
+                } else if (displayTextVar.includes("-")) {
                     displayTextVar = displayTextVar.replace("-", "");
                     displayText.textContent = displayTextVar;
                 } else {
