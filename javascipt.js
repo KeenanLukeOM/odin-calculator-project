@@ -252,11 +252,7 @@ selector.forEach((selector) => {
 
                     const startsWithFraction = outcome.startsWith("0.");
 
-                    let roundedSuffix = parseFloat(
-                        startsWithFraction
-                            ? "0." + decimalSuffix
-                            : "0." + decimalSuffix
-                    );
+                    let roundedSuffix = parseFloat("0." + decimalSuffix);
 
                     roundedSuffix = roundedSuffix.toFixed(5);
 
