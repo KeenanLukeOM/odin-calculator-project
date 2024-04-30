@@ -240,7 +240,30 @@ selector.forEach((selector) => {
                 secondNumber = displayTextVar;
 
                 // Calculates outcome
-                const outcome = operate();
+                let outcome = operate().toString();
+
+                // Checks for decimal and rounds to 5 points max
+                if (outcome.includes(".")) {
+                    const outcomeDecimalIndex = outcome.indexOf(".");
+
+                    const decimalSuffix = outcome.substring(
+                        outcomeDecimalIndex + 1
+                    );
+
+                    const startsWithFraction = outcome.startsWith("0.");
+
+                    let roundedSuffix = parseFloat(
+                        startsWithFraction
+                            ? "0." + decimalSuffix
+                            : "0." + decimalSuffix
+                    );
+
+                    roundedSuffix = roundedSuffix.toFixed(5);
+
+                    outcome =
+                        outcome.substring(0, outcomeDecimalIndex + 1) +
+                        roundedSuffix.substring(2);
+                }
 
                 // Sets first number to outcome and only ui to outcome
                 firstNumber = outcome;
