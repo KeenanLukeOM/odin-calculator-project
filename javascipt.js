@@ -43,6 +43,10 @@ selector.forEach((selector) => {
                     // Wipes display content
                     displayTextVar = "";
                     displayText.textContent = displayTextVar;
+                } else if (displayTextVar === "") {
+                    // Sets small text content
+                    smallDisplayTextVar = smallDisplayTextVar + " " + "÷";
+                    smallDisplayText.textContent = smallDisplayTextVar;
                 } else {
                     // If second display populated, sets numbers to display text
                     secondNumber = displayTextVar;
@@ -86,6 +90,10 @@ selector.forEach((selector) => {
                     // Wipes display content
                     displayTextVar = "";
                     displayText.textContent = displayTextVar;
+                } else if (displayTextVar === "") {
+                    // Sets small text content
+                    smallDisplayTextVar = smallDisplayTextVar + " " + "x";
+                    smallDisplayText.textContent = smallDisplayTextVar;
                 } else {
                     // If second display populated, sets numbers to display text
                     secondNumber = displayTextVar;
@@ -129,6 +137,10 @@ selector.forEach((selector) => {
                     // Wipes display content
                     displayTextVar = "";
                     displayText.textContent = displayTextVar;
+                } else if (displayTextVar === "") {
+                    // Sets small text content
+                    smallDisplayTextVar = smallDisplayTextVar + " " + "-";
+                    smallDisplayText.textContent = smallDisplayTextVar;
                 } else {
                     // If second display populated, sets numbers to display text
                     secondNumber = displayTextVar;
@@ -172,6 +184,10 @@ selector.forEach((selector) => {
                     // Wipes display content
                     displayTextVar = "";
                     displayText.textContent = displayTextVar;
+                } else if (displayTextVar === "") {
+                    // Sets small text content
+                    smallDisplayTextVar = smallDisplayTextVar + " " + "+";
+                    smallDisplayText.textContent = smallDisplayTextVar;
                 } else {
                     // If second display populated, sets numbers to display text
                     secondNumber = displayTextVar;
