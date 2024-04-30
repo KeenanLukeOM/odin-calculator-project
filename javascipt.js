@@ -66,6 +66,17 @@ selector.forEach((selector) => {
                     smallDisplayTextVar = smallDisplayTextVar + " " + "÷";
                     smallDisplayText.textContent = smallDisplayTextVar;
                 } else {
+                    // Returns error and wipes calculator if dividing by zero
+                    if (firstNumber == 0 && secondNumber == 0) {
+                        displayTextVar = "";
+                        displayText.textContent = "0";
+                        alert("Nice try, you can't divide by 0!");
+
+                        smallDisplayTextVar = "";
+                        smallDisplayText.textContent = smallDisplayTextVar;
+                        break;
+                    }
+
                     // If second display populated, sets numbers to display text
                     secondNumber = displayTextVar;
 
@@ -242,7 +253,20 @@ selector.forEach((selector) => {
                 if (displayTextVar === "") {
                     break;
                 }
+                // Checks for division by zero, resets calc
+                if (
+                    firstNumber == 0 &&
+                    secondNumber == 0 &&
+                    operator === "div"
+                ) {
+                    displayTextVar = "";
+                    displayText.textContent = "0";
+                    alert("Nice try, you can't divide by 0!");
 
+                    smallDisplayTextVar = "";
+                    smallDisplayText.textContent = smallDisplayTextVar;
+                    break;
+                }
                 // Sets numbers to display text
                 secondNumber = displayTextVar;
 
