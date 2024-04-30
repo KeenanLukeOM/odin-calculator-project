@@ -20,7 +20,7 @@ selector.forEach((selector) => {
         switch (action) {
             case "clear":
                 displayTextVar = "";
-                displayText.textContent = displayTextVar;
+                displayText.textContent = 0;
                 smallDisplayTextVar = "";
                 smallDisplayText.textContent = smallDisplayTextVar;
                 break;
