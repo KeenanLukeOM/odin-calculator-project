@@ -32,12 +32,24 @@ selector.forEach((selector) => {
                     smallDisplayTextVar !== "" &&
                     displayTextVar.includes("-")
                 ) {
-                    displayTextVar = smallDisplayTextVar.toString();
+                    if (displayTextVar === "-0") {
+                        displayTextVar = "-0";
+                        console.log(displayTextVar);
+                    } else {
+                        displayTextVar = smallDisplayTextVar.toString();
+                    }
 
                     displayTextVar = displayTextVar.replace("-", "");
+                    console.log(displayTextVar);
                     displayText.textContent = displayTextVar;
                 } else if (smallDisplayTextVar !== "") {
-                    displayTextVar = smallDisplayTextVar;
+                    if (displayTextVar === "") {
+                        displayTextVar = "0";
+                    } else if (displayTextVar === "0") {
+                        displayTextVar = "0";
+                    } else {
+                        displayTextVar = smallDisplayTextVar;
+                    }
 
                     displayTextVar = "-" + displayTextVar;
                     displayText.textContent = displayTextVar;
@@ -51,6 +63,11 @@ selector.forEach((selector) => {
                 break;
             case "divide":
                 if (smallDisplayTextVar === "") {
+                    // Checks for an initial value, returns zero if not present
+                    if (displayTextVar === "") {
+                        displayTextVar = "0";
+                    }
+
                     // Sets the first number, operator to text
                     firstNumber = displayTextVar;
                     operator = "div";
@@ -109,6 +126,11 @@ selector.forEach((selector) => {
                 break;
             case "multiply":
                 if (smallDisplayTextVar === "") {
+                    // Checks for an initial value, returns zero if not present
+                    if (displayTextVar === "") {
+                        displayTextVar = "0";
+                    }
+
                     // Sets the first number, operator to text
                     firstNumber = displayTextVar;
                     operator = "mult";
@@ -156,6 +178,11 @@ selector.forEach((selector) => {
                 break;
             case "minus":
                 if (smallDisplayTextVar === "") {
+                    // Checks for an initial value, returns zero if not present
+                    if (displayTextVar === "") {
+                        displayTextVar = "0";
+                    }
+
                     // Sets the first number, operator to text
                     firstNumber = displayTextVar;
                     operator = "sub";
@@ -203,6 +230,11 @@ selector.forEach((selector) => {
                 break;
             case "plus":
                 if (smallDisplayTextVar === "") {
+                    // Checks for an initial value, returns zero if not present
+                    if (displayTextVar === "") {
+                        displayTextVar = "0";
+                    }
+
                     // Sets the first number, operator to text
                     firstNumber = displayTextVar;
                     operator = "add";
