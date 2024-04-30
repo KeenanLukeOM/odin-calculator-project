@@ -250,8 +250,6 @@ selector.forEach((selector) => {
                         outcomeDecimalIndex + 1
                     );
 
-                    const startsWithFraction = outcome.startsWith("0.");
-
                     let roundedSuffix = parseFloat("0." + decimalSuffix);
 
                     roundedSuffix = roundedSuffix.toFixed(5);
