@@ -21,8 +21,11 @@ selector.forEach((selector) => {
             case "clear":
                 displayTextVar = "";
                 displayText.textContent = 0;
+                firstNumber = 0;
+
                 smallDisplayTextVar = "";
                 smallDisplayText.textContent = smallDisplayTextVar;
+                secondNumber = 0;
                 break;
             case "negative":
                 if (
@@ -236,6 +239,10 @@ selector.forEach((selector) => {
                 }
                 break;
             case "equals":
+                if (displayTextVar === "") {
+                    break;
+                }
+
                 // Sets numbers to display text
                 secondNumber = displayTextVar;
 
