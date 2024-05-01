@@ -6,6 +6,12 @@
     flex-direction: column;
 }
 
+#main {
+    margin: 250px;
+    display: flex;
+    justify-content: center;
+}
+
 #display {
     flex: 5 1 266px;
     display: flex;
@@ -66,4 +72,24 @@ button {
 
 .smallDisplayText {
     font-size: 32px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footerWindow {
+    display: flex;
+    justify-content: center;
+}
+
+.footerText {
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding: 18px;
 }
