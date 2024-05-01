@@ -82,6 +82,7 @@ selector.forEach((selector) => {
                     // Sets small text content
                     smallDisplayTextVar = smallDisplayTextVar + " " + "÷";
                     smallDisplayText.textContent = smallDisplayTextVar;
+                    operator = "div";
                 } else {
                     // Returns error and wipes calculator if dividing by zero
                     if (firstNumber == 0 && secondNumber == 0) {
@@ -145,6 +146,7 @@ selector.forEach((selector) => {
                     // Sets small text content
                     smallDisplayTextVar = smallDisplayTextVar + " " + "x";
                     smallDisplayText.textContent = smallDisplayTextVar;
+                    operator = "mult";
                 } else {
                     // If second display populated, sets numbers to display text
                     secondNumber = displayTextVar;
@@ -197,6 +199,7 @@ selector.forEach((selector) => {
                     // Sets small text content
                     smallDisplayTextVar = smallDisplayTextVar + " " + "-";
                     smallDisplayText.textContent = smallDisplayTextVar;
+                    operator = "sub";
                 } else {
                     // If second display populated, sets numbers to display text
                     secondNumber = displayTextVar;
@@ -249,6 +252,7 @@ selector.forEach((selector) => {
                     // Sets small text content
                     smallDisplayTextVar = smallDisplayTextVar + " " + "+";
                     smallDisplayText.textContent = smallDisplayTextVar;
+                    operator = "add";
                 } else {
                     // If second display populated, sets numbers to display text
                     secondNumber = displayTextVar;
