@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #calculatorBox {
     width: 500px;
     height: 800px;
@@ -7,9 +12,11 @@
 }
 
 #main {
-    margin: 250px;
+    height: 95vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #display {
@@ -84,12 +91,18 @@ button {
 .footerWindow {
     display: flex;
     justify-content: center;
+    width: 100vw;
 }
 
 .footerText {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 400;
     text-decoration: none;
-    color: black;
-    padding: 18px;
+    color: rgb(20, 20, 20);
+    height: 5vh;
+}
+.footerText:hover {
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
 }
