@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 #calculatorBox {
@@ -43,13 +44,34 @@
 }
 
 .row {
-    flex: 1 1 133px;
+    flex: 1 1 80px;
     display: flex;
+    align-items: center;
 }
 
 button {
     font-size: 44px;
-    padding: 10px 30px;
+    width: 80px;
+    height: 60px;
+}
+
+.windowSplit {
+    flex: 1 1 400px;
+}
+
+.small {
+    display: flex;
+    flex: 1 1 400px;
+    justify-content: space-around;
+}
+
+.large {
+    display: flex;
+    justify-content: center;
+}
+
+.largeButton {
+    width: 205px;
 }
 
 .button {
@@ -60,13 +82,13 @@ button {
     align-items: center;
 }
 
-.lowerButton,
+/* .lowerButton,
 .topButton {
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .zero,
 .clear {
@@ -92,6 +114,7 @@ button {
     display: flex;
     justify-content: center;
     width: 100vw;
+    background-color: aqua;
 }
 
 .footerText {
@@ -100,6 +123,8 @@ button {
     text-decoration: none;
     color: rgb(20, 20, 20);
     height: 5vh;
+    display: flex;
+    align-items: center;
 }
 .footerText:hover {
     font-size: 24px;
