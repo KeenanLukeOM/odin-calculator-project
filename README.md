@@ -6,7 +6,7 @@ https://www.theodinproject.com/paths
 
 **Link to project:** https://keenanlukeom.github.io/odin-calculator-project/
 
-![ODIN Calculator Project](https://ibb.co/fFt0mwJ)
+![ODIN Calculator Project](https://i.ibb.co/Pj4CBHk/Calculator.png)
 
 ## How It's Made:
 
